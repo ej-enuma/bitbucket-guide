@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pull Request · Bitbucket 입문 가이드</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <button id="nav-toggle" class="nav-toggle" type="button">☰</button>
+  <div class="shell">
+    <aside class="sidebar">
+      <p class="brand">🪣 Bitbucket 가이드</p>
+      <nav id="sidebar"></nav>
+    </aside>
+    <main class="content">
+      <h1>🔀 Pull Request</h1>
+      <p class="lead">Pull Request(PR)는 "내 브랜치를 main에 합쳐 주세요"라고 요청하며 <strong>팀의 리뷰를 받는</strong> 과정이에요.</p>
+
+      <h2>1. 브랜치 올리기</h2>
+      <p>먼저 작업한 브랜치를 Bitbucket에 올립니다.</p>
+      <div class="code-block"><pre>$ git push origin feature/login</pre></div>
+
+      <h2>2. Pull Request 만들기</h2>
+      <p>저장소 화면 왼쪽 메뉴 <strong>Pull requests</strong> → <strong>Create pull request</strong>를 누릅니다. 합칠 방향을 정해요: <code>feature/login</code> → <code>main</code>.</p>
+      <div class="shot-placeholder">📷 여기에 "Create pull request" 화면 스크린샷</div>
+
+      <h2>3. 제목 · 설명 쓰기</h2>
+      <p>무엇을 왜 바꿨는지 적고, 리뷰어(Reviewers)를 지정한 뒤 <strong>Create</strong>를 누릅니다.</p>
+      <div class="tip">💡 설명에 "어떻게 테스트했는지"를 적으면 리뷰어가 훨씬 빨리 확인할 수 있어요.</div>
+
+      <h2>4. 리뷰 → 머지</h2>
+      <p>리뷰어가 코멘트를 남기면 수정해서 같은 브랜치에 다시 push하면 PR에 자동 반영돼요. 승인(Approve)을 받으면 <strong>Merge</strong> 버튼으로 main에 합칩니다.</p>
+
+      <h2>5. 마무리</h2>
+      <p>머지가 끝나면 내 컴퓨터에서도 최신 main을 받아옵니다.</p>
+      <div class="code-block"><pre>$ git switch main
+$ git pull origin main</pre></div>
+
+      <p>축하해요! 🎉 이제 Bitbucket으로 팀과 협업하는 전체 흐름을 익혔습니다.</p>
+
+      <div class="page-nav">
+        <a href="branches.html">← 브랜치 &amp; 머지</a>
+        <a href="index.html">처음으로 ↑</a>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/copy.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>브랜치 & 머지 · Bitbucket 입문 가이드</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <button id="nav-toggle" class="nav-toggle" type="button">☰</button>
+  <div class="shell">
+    <aside class="sidebar">
+      <p class="brand">🪣 Bitbucket 가이드</p>
+      <nav id="sidebar"></nav>
+    </aside>
+    <main class="content">
+      <h1>🌿 브랜치 &amp; 머지</h1>
+      <p class="lead">브랜치는 <strong>본체(main)를 건드리지 않고 따로 작업하는 갈래</strong>예요. 작업이 끝나면 다시 합칩니다(머지).</p>
+
+      <h2>1. 새 브랜치 만들고 이동</h2>
+      <div class="code-block"><pre>$ git switch -c feature/login</pre></div>
+      <p><code>-c</code>는 새로 만들면서 이동한다는 뜻이에요. 이제 이 갈래에서 자유롭게 작업하세요.</p>
+
+      <h2>2. 작업 후 올리기</h2>
+      <div class="code-block"><pre>$ git add .
+$ git commit -m "로그인 기능 추가"
+$ git push origin feature/login</pre></div>
+
+      <h2>3. main으로 합치기 (merge)</h2>
+      <p>먼저 main으로 이동해 최신 상태로 만든 뒤, 브랜치를 합칩니다.</p>
+      <div class="code-block"><pre>$ git switch main
+$ git pull origin main
+$ git merge feature/login</pre></div>
+
+      <div class="tip">💡 실무에서는 직접 머지보다 <strong>Pull Request</strong>로 리뷰를 받고 합치는 경우가 많아요. 다음 페이지에서 다룹니다.</div>
+
+      <h2>4. 충돌(conflict)이 났다면?</h2>
+      <p>같은 줄을 두 사람이 다르게 고치면 충돌이 나요. 당황하지 말고, 충돌난 파일을 열면 이렇게 표시돼요.</p>
+      <div class="code-block"><pre>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+내가 쓴 코드
+=======
+팀원이 쓴 코드
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/login</pre></div>
+      <p>표시 기호(<code>&lt;&lt;&lt;</code>, <code>===</code>, <code>&gt;&gt;&gt;</code>)를 지우고 <strong>올바른 최종 코드</strong>만 남긴 뒤, 다시 add → commit 하면 해결됩니다.</p>
+
+      <div class="page-nav">
+        <a href="git-basics.html">← 기본 Git 흐름</a>
+        <a href="pull-request.html">Pull Request →</a>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/copy.js"></script>
+</body>
+</html>

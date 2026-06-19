@@ -1,0 +1,9 @@
+{
+  "name": "bitbucket-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Git/협업 입문자를 위한 Bitbucket 사용법 가이드",
+  "scripts": {
+    "test": "node --test test/render-sidebar.test.js test/pages.test.js"
+  }
+}

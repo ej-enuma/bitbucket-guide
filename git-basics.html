@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>기본 Git 흐름 · Bitbucket 입문 가이드</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <button id="nav-toggle" class="nav-toggle" type="button">☰</button>
+  <div class="shell">
+    <aside class="sidebar">
+      <p class="brand">🪣 Bitbucket 가이드</p>
+      <nav id="sidebar"></nav>
+    </aside>
+    <main class="content">
+      <h1>🔁 기본 Git 흐름</h1>
+      <p class="lead">코드를 바꾼 뒤 Bitbucket에 올리는 가장 기본적인 4단계를 익혀요: <strong>확인 → 담기 → 기록 → 올리기</strong>.</p>
+
+      <h2>1. 무엇이 바뀌었는지 확인 (status)</h2>
+      <div class="code-block"><pre>$ git status</pre></div>
+      <p>수정·추가된 파일 목록이 빨간색으로 보여요.</p>
+
+      <h2>2. 올릴 변경사항 담기 (add)</h2>
+      <div class="code-block"><pre>$ git add .</pre></div>
+      <p><code>.</code>은 "바뀐 것 전부"라는 뜻이에요. 특정 파일만 담으려면 파일명을 적습니다.</p>
+
+      <h2>3. 변경 내용 기록하기 (commit)</h2>
+      <div class="code-block"><pre>$ git commit -m "로그인 화면 추가"</pre></div>
+      <div class="tip">💡 <code>-m</code> 뒤 메시지는 "무엇을 왜 바꿨는지" 나중의 나와 팀이 알아볼 수 있게 적어요.</div>
+
+      <h2>4. Bitbucket에 올리기 (push)</h2>
+      <div class="code-block"><pre>$ git push origin main</pre></div>
+      <p>이제 Bitbucket 저장소에서 방금 올린 내용을 확인할 수 있어요.</p>
+
+      <h2>팀의 최신 코드 받기 (pull)</h2>
+      <p>다른 팀원이 올린 변경을 내 컴퓨터로 가져옵니다. <strong>작업 시작 전에 습관적으로</strong> 실행하세요.</p>
+      <div class="code-block"><pre>$ git pull origin main</pre></div>
+
+      <div class="page-nav">
+        <a href="repository.html">← 저장소 생성 &amp; 클론</a>
+        <a href="branches.html">브랜치 &amp; 머지 →</a>
+      </div>
+    </main>
+  </div>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/copy.js"></script>
+</body>
+</html>
